@@ -72,4 +72,5 @@ This application is optimized for deployment on Render.
 > **WARNING:**  
 > Ephemeral Storage: Files are stored in temporary memory. If the server goes to sleep or is restarted, all shared data is permanently deleted.
 
+----------------------------------------
 (c) 2026 DropSpace Project
