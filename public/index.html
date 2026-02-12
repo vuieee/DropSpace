@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropSpace</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">DropSpace</div>
+            <button id="wipeBtn" class="danger-btn">Wipe & Close</button>
+        </header>
+
+        <div id="connectPanel" class="panel">
+            <div class="qr-wrapper">
+                <img id="qrImage" src="" alt="Scan to Connect" />
+            </div>
+            <div class="connect-info">
+                <h3>Scan to Join</h3>
+                <p id="serverAddress">Loading...</p>
+            </div>
+        </div>
+
+        <div class="upload-area">
+            <input type="file" id="fileInput" accept="image/*,video/*,audio/*">
+            <label for="fileInput" class="upload-btn">
+                <span class="plus">+</span> Add File
+            </label>
+        </div>
+        
+        <div id="progressContainer" class="progress-container hidden">
+            <div id="progressBar" class="progress-bar"></div>
+        </div>
+
+        <div id="fileGrid" class="file-grid">
+            </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
