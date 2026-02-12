@@ -10,7 +10,7 @@ const QRCode = require('qrcode');
 const app = express();
 const server = http.createServer(app);
 const io = socketIo(server);
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const MAX_FILE_SIZE = 200 * 1024 * 1024; // 200MB
 const UPLOAD_DIR = path.join(__dirname, 'uploads');
@@ -121,4 +121,5 @@ app.post('/api/clear', (req, res) => {
 
 server.listen(PORT, '0.0.0.0', () => {
     console.log(`Server running. Files will be DELETED when you stop this.`);
+
 });
